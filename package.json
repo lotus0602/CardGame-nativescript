@@ -1,0 +1,17 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.CardGame",
+    "tns-android": {
+      "version": "3.1.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-theme-core": "1.0.4",
+    "tns-core-modules": "3.1.1"
+  },
+  "devDependencies": {}
+}
