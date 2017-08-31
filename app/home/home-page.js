@@ -11,8 +11,22 @@ JavaScript modules defined in other files.
 */
 var frameModule = require("ui/frame");
 var HomeViewModel = require("./home-view-model");
+var externCard = require("../class/card");
 
 var homeViewModel = new HomeViewModel();
+var card = null;
+
+function onLoaded(args) {
+    let cards = [52];
+    for (var j = 0; j < 4; j++) {
+        for (var k = 1; k <= 13; k++) {
+            cards[(j * 13) + k] = new externCard.Card(k, j, j % 2);
+            console.log("card info : " + cards[(j * 13) + k].number + 
+                " " + cards[(j * 13) + k].pattern + 
+                " " + cards[(j * 13) + k].color);
+        }
+    }
+}
 
 function onNavigatingTo(args) {
     /*
@@ -41,4 +55,5 @@ to the file’s corresponding XML file. In this case, exporting the onNavigating
 function here makes the navigatingTo="onNavigatingTo" binding in this page’s XML
 file work.
 */
+exports.onLoaded = onLoaded;
 exports.onNavigatingTo = onNavigatingTo;
