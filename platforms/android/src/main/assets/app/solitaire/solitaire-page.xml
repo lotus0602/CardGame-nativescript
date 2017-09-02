@@ -1,0 +1,10 @@
+<Page
+    loaded="onLoaded"
+    xmlns="http://www.nativescript.org/tns.xsd">
+
+    <ActionBar title="Solitaire"></ActionBar>
+
+    <StackLayout>
+        <TextView text="solitaire start!"/>
+    </StackLayout>
+</Page>
