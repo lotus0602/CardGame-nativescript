@@ -9,6 +9,6 @@
 
     <StackLayout>
         <Button text="Solitaire" tap="onSolitaireButtonTab"/>
-        <Button text="Pocker" tap="onPockerButtonTab"/>
+        <Button text="Poker" tap="onPokerButtonTab"/>
     </StackLayout>
 </Page>

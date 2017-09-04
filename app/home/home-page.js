@@ -82,8 +82,8 @@ function onSolitaireButtonTab(args) {
     topmost.navigate("solitaire/solitaire-page");
 }
 
-function onPockerButtonTab(args) {
-    console.log("Pocker Button Tap");
+function onPokerButtonTab(args) {
+    console.log("Poker Button Tap");
 }
 
 
@@ -96,4 +96,4 @@ file work.
 exports.onLoaded = onLoaded;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onSolitaireButtonTab = onSolitaireButtonTab;
-exports.onPockerButtonTab = onPockerButtonTab;
+exports.onPokerButtonTab = onPokerButtonTab;
