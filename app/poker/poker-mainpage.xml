@@ -1,0 +1,21 @@
+<Page
+    loaded="onLoaded"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://www.nativescript.org/tns.xsd">
+
+    <ActionBar title="Poker"></ActionBar>
+
+    <StackLayout>
+        <TextView text="Dealer" />
+        <TextView text="Dealer's cards" />
+        <TextView text=""/>
+        <TextView text="My" />
+        <TextView text="My cards"/>
+        <TextView text=""/>
+
+      <!-- <Button text="check" tap="onCheckBtnTab"/>
+        <Button text="Raise" tap="onRaiseBtnTab"/>
+        <Button text="call" tap="onCallBtnTab"/>
+        <Button text="fold" tap="onFoldBtnTab"/> -->
+    </StackLayout>
+</Page>

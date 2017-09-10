@@ -11,47 +11,17 @@ JavaScript modules defined in other files.
 */
 var frameModule = require("ui/frame");
 var HomeViewModel = require("./home-view-model");
-var externCard = require("../class/card");
 
 var homeViewModel = new HomeViewModel();
 var card = null;
-const CARDSIZE = 52;
-let cards = [CARDSIZE];
+
+let deck;// = [CARDSIZE];
 
 function onLoaded(args) {
     
-    
-    MakeCards();
-    ShuffleCards();
-
-    // check shuffled cards
-    for (var i=0 ; i<CARDSIZE ; i++){
-         console.log("card info "+i+ " : "+ cards[i].number + 
-                " " + cards[i].pattern + 
-                " " + cards[i].color);
-    }
 } 
-function MakeCards(){
-     for (var j = 0; j < 4; j++) {
-        for (var k = 1; k <= 13; k++) {
-            cards[(j * 13) + k-1] = new externCard.Card(k, j, j % 2);
-            // console.log("card info : " + cards[(j * 13) + k-1].number + 
-            //     " " + cards[(j * 13) + k-1].pattern + 
-            //     " " + cards[(j * 13) + k-1].color);
-        }
-    }
-}
 
-function ShuffleCards(){
-    var tmpData =0;
-    var tempIDX =0;
-    for(var i =0; i<CARDSIZE ; i++){
-       tmp = cards[i];
-       tempIDX = (rand() % (CARDSIZE - i)) + i;
-       cards[i] = cards[tempIDX];
-       cards[tempIDX] = tmp;
-    }
-}
+
 
 function onNavigatingTo(args) {
     /*
@@ -83,9 +53,16 @@ function onSolitaireButtonTab(args) {
 }
 
 function onPokerButtonTab(args) {
-    console.log("Poker Button Tap");
-}
+    //console.log("Poker Button Tap");
 
+    var topmost = frameModule.topmost();
+    //console.log(topmost);
+    topmost.navigate("poker/poker-mainpage");
+
+}
+function getCards(){
+    return cards;
+}
 
 /*
 Exporting a function in a NativeScript code-behind file makes it accessible
@@ -94,6 +71,7 @@ function here makes the navigatingTo="onNavigatingTo" binding in this page’s X
 file work.
 */
 exports.onLoaded = onLoaded;
+exports.cards = getCards;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onSolitaireButtonTab = onSolitaireButtonTab;
 exports.onPokerButtonTab = onPokerButtonTab;

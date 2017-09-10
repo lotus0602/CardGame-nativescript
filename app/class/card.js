@@ -1,3 +1,4 @@
+
 class Card {
 	constructor(number, pattern, color) {
 		this.number = number;
