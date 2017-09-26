@@ -4,7 +4,25 @@
 
     <ActionBar title="Solitaire"></ActionBar>
 
-    <StackLayout>
-        <TextView text="solitaire start!"/>
+    <StackLayout orientation="vertical" backgroundColor="green">
+        <StackLayout orientation="horizontal">
+            <Label text="DECK" textAlignment="center" width="60" height="100" backgroundColor="gray" tap="flipCardFromDeck"/>
+            <Label text="{{ flip_card }}" textAlignment="center" textWrap="true" width="60" height="100" marginLeft="10" 
+            backgroundColor="gray" borderColor="black" borderWidth="2"/>
+            <Label text="DECK" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+        </StackLayout>
+        
+        <StackLayout orientation="horizontal" marginTop="30">
+            <Label text="DECK1" textAlignment="center" width="60" height="100" borderColor="black" borderWidth="2"/>
+            <Label text="DECK2" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK3" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK4" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK5" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+            <Label text="DECK6" textAlignment="center" width="60" height="100" marginLeft="10" borderColor="black" borderWidth="2"/>
+        </StackLayout>
+
     </StackLayout>
 </Page>

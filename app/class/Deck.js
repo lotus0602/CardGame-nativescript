@@ -16,11 +16,13 @@ class Deck{
 	}
 
 	ShuffleCards(){
+		console.log("Start Shuffle");
+
 	    var tmpData =0;
 	    var tempIDX =0;
 	    for(var i =0; i<CARDSIZE ; i++){
 	       var tmp = this.cards[i];
-	       tempIDX = (rand() % (CARDSIZE - i)) + i;
+	       tempIDX = Math.floor(Math.random() * (CARDSIZE - i)) + i;
 	       this.cards[i] = this.cards[tempIDX];
 	       this.cards[tempIDX] = tmp;
 	    }

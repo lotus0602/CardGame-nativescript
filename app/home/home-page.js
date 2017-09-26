@@ -13,15 +13,10 @@ var frameModule = require("ui/frame");
 var HomeViewModel = require("./home-view-model");
 
 var homeViewModel = new HomeViewModel();
-var card = null;
-
-let deck;// = [CARDSIZE];
 
 function onLoaded(args) {
     
 } 
-
-
 
 function onNavigatingTo(args) {
     /*
@@ -60,9 +55,6 @@ function onPokerButtonTab(args) {
     topmost.navigate("poker/poker-mainpage");
 
 }
-function getCards(){
-    return cards;
-}
 
 /*
 Exporting a function in a NativeScript code-behind file makes it accessible
@@ -71,7 +63,6 @@ function here makes the navigatingTo="onNavigatingTo" binding in this page’s X
 file work.
 */
 exports.onLoaded = onLoaded;
-exports.cards = getCards;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onSolitaireButtonTab = onSolitaireButtonTab;
 exports.onPokerButtonTab = onPokerButtonTab;

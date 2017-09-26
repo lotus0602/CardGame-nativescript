@@ -10,12 +10,21 @@ let players = [PLAYERCOUNT];
 let myinfo = null;
 let myDeck ;
 
+var viewModel = null;
+
 function onLoaded(args) {
+	const component = args.object;
+	viewModel = new PokerViewModel();
+	component.bindingContext = viewModel;
+
 	myDeck = new Deck.Deck();
 	myDeck.CreateCards();
 	myDeck.ShuffleCards();
-	myDeck.CardLog();
+	// myDeck.CardLog();
 	
+	viewModel.setData("data1", "Start1");
+	viewModel.setData("data2", "Start2");
+	viewModel.setData("data3", "Start3");
 }
 
 function onStartBtnTab(args){

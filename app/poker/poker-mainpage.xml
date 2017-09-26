@@ -11,7 +11,9 @@
         <TextView text=""/>
         <TextView text="My" />
         <TextView text="My cards"/>
-        <TextView text=""/>
+        <Label text= "{{ data1 }}"/>
+        <Label text= "{{ data2 }}"/>
+        <Label text= "{{ data3 }}"/>
 
       <!-- <Button text="check" tap="onCheckBtnTab"/>
         <Button text="Raise" tap="onRaiseBtnTab"/>
